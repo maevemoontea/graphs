@@ -1,0 +1,14 @@
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\bin\Debug\AdjecencyGUI.exe.config
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\bin\Debug\AdjecencyGUI.exe
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\bin\Debug\AdjecencyGUI.pdb
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\obj\Debug\AdjecencyGUI.csprojResolveAssemblyReference.cache
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\obj\Debug\AdjecencyGUI.MainForm.resources
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\obj\Debug\AdjecencyGUI.Properties.Resources.resources
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\obj\Debug\AdjecencyGUI.csproj.GenerateResource.Cache
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\obj\Debug\AdjecencyGUI.csproj.CoreCompileInputs.cache
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\obj\Debug\AdjecencyGUI.exe
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\obj\Debug\AdjecencyGUI.pdb
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\obj\Debug\AdjecencyGUI.AdjacencyMatrixForm.resources
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\obj\Debug\AdjecencyGUI.DegreesListForm.resources
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\bin\Debug\GraphLibrary.dll
+C:\Users\maeve\source\repos\AdjecencyGraph\AdjecencyGUI\bin\Debug\GraphLibrary.pdb

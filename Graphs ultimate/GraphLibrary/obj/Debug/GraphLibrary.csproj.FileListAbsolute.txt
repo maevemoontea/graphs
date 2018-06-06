@@ -1,0 +1,12 @@
+C:\Users\maeve\source\repos\AdjecencyGraph\GraphLibrary\bin\Debug\GraphLibrary.dll
+C:\Users\maeve\source\repos\AdjecencyGraph\GraphLibrary\bin\Debug\GraphLibrary.pdb
+C:\Users\maeve\source\repos\AdjecencyGraph\GraphLibrary\obj\Debug\GraphLibrary.csprojResolveAssemblyReference.cache
+C:\Users\maeve\source\repos\AdjecencyGraph\GraphLibrary\obj\Debug\GraphLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maeve\source\repos\AdjecencyGraph\GraphLibrary\obj\Debug\GraphLibrary.dll
+C:\Users\maeve\source\repos\AdjecencyGraph\GraphLibrary\obj\Debug\GraphLibrary.pdb
+C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\GraphLibrary\bin\Debug\GraphLibrary.dll
+C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\GraphLibrary\bin\Debug\GraphLibrary.pdb
+C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\GraphLibrary\obj\Debug\GraphLibrary.csprojResolveAssemblyReference.cache
+C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\GraphLibrary\obj\Debug\GraphLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\GraphLibrary\obj\Debug\GraphLibrary.dll
+C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\GraphLibrary\obj\Debug\GraphLibrary.pdb
