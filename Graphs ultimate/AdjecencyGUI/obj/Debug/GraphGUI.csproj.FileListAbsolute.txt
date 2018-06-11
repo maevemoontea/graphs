@@ -13,3 +13,5 @@ C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\AdjecencyGUI\bin\Deb
 C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\AdjecencyGUI\bin\Debug\GraphLibrary.dll
 C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\AdjecencyGUI\bin\Debug\GraphLibrary.pdb
 C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\AdjecencyGUI\obj\Debug\AdjecencyGUI.FindTheWayForm.resources
+C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\AdjecencyGUI\obj\Debug\AdjecencyGUI.FindBackupsForm.resources
+C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\AdjecencyGUI\obj\Debug\AdjecencyGUI.MessageForm.resources

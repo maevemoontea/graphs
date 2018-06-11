@@ -57,6 +57,12 @@
     <Compile Include="DegreesListForm.Designer.cs">
       <DependentUpon>DegreesListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FindBackupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindBackupsForm.Designer.cs">
+      <DependentUpon>FindBackupsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindTheWayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdjacencyMatrixForm.resx">
@@ -77,11 +89,17 @@
     <EmbeddedResource Include="DegreesListForm.resx">
       <DependentUpon>DegreesListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FindBackupsForm.resx">
+      <DependentUpon>FindBackupsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FindTheWayForm.resx">
       <DependentUpon>FindTheWayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

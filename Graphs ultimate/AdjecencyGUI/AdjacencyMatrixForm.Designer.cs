@@ -50,7 +50,7 @@
             this.textBoxAdjacencyMatrix.Multiline = true;
             this.textBoxAdjacencyMatrix.Name = "textBoxAdjacencyMatrix";
             this.textBoxAdjacencyMatrix.Size = new System.Drawing.Size(249, 103);
-            this.textBoxAdjacencyMatrix.TabIndex = 3;
+            this.textBoxAdjacencyMatrix.TabIndex = 0;
             // 
             // textBoxAdjacencyDescr
             // 

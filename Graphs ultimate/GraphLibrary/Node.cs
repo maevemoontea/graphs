@@ -1,9 +1,11 @@
 ﻿using System.Drawing;
+using System.Collections.Generic;
 
 namespace GraphLibrary
 {
     public class Node
     {
+        private Graph parent;
         private string name;
         public Point position;
         private int degree;
@@ -11,7 +13,15 @@ namespace GraphLibrary
         private string[] connections;
         private string connectionsList;
         private int cursor;
+        private int[] extent; //міра, об'єм -- мається на увазі вага ребер
+        private List<Node> availables;
+        private List<Node> backupArray;
+        private List<Node> storedNodes;
 
+        public Graph Parent
+        {
+            get { return parent; }
+        }
         public string Name
         {
             get { return name; }
@@ -42,9 +52,30 @@ namespace GraphLibrary
             get { return cursor; }
             set { cursor = value; }
         }
-
-        public Node()
+        public int[] Extent
         {
+            get { return extent; }
+            set { extent = value; }
+        }
+        public List<Node> Availables
+        {
+            get { return availables; }
+            set { availables = value; }
+        }
+        public List<Node> BackupArray
+        {
+            get { return backupArray; }
+            set { backupArray = value; } //need to ad an validation: is this value in Extent array?
+        }
+        public List<Node> StoredNodes
+        {
+            get { return storedNodes; }
+            set { storedNodes = value; }
+        }
+
+        public Node(Graph papa)
+        {
+            parent = papa;
             color = "Gray"; //not used yet
             degree = 0;
             connectionsList = "";

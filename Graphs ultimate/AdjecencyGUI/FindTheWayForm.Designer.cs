@@ -44,7 +44,7 @@
             this.label1.Location = new System.Drawing.Point(13, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(328, 13);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 50;
             this.label1.Text = "Вкажіть назви вершин графу, між якими треба віднайти шлях.  ";
             // 
             // label2
@@ -53,7 +53,7 @@
             this.label2.Location = new System.Drawing.Point(13, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(322, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 50;
             this.label2.Text = "(назви проставлені біля вершин графу латинськими літерами)";
             // 
             // label3
@@ -62,7 +62,7 @@
             this.label3.Location = new System.Drawing.Point(16, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 13);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 50;
             this.label3.Text = "Початок шляху:";
             // 
             // label4
@@ -71,7 +71,7 @@
             this.label4.Location = new System.Drawing.Point(16, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 13);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 50;
             this.label4.Text = "Точка призначення:";
             // 
             // textBoxStart
@@ -79,21 +79,21 @@
             this.textBoxStart.Location = new System.Drawing.Point(156, 84);
             this.textBoxStart.Name = "textBoxStart";
             this.textBoxStart.Size = new System.Drawing.Size(100, 20);
-            this.textBoxStart.TabIndex = 4;
+            this.textBoxStart.TabIndex = 0;
             // 
             // textBoxDestination
             // 
             this.textBoxDestination.Location = new System.Drawing.Point(156, 116);
             this.textBoxDestination.Name = "textBoxDestination";
             this.textBoxDestination.Size = new System.Drawing.Size(100, 20);
-            this.textBoxDestination.TabIndex = 5;
+            this.textBoxDestination.TabIndex = 1;
             // 
             // btnFindRoad
             // 
             this.btnFindRoad.Location = new System.Drawing.Point(151, 158);
             this.btnFindRoad.Name = "btnFindRoad";
             this.btnFindRoad.Size = new System.Drawing.Size(105, 23);
-            this.btnFindRoad.TabIndex = 6;
+            this.btnFindRoad.TabIndex = 5;
             this.btnFindRoad.Text = "Знайти шлях";
             this.btnFindRoad.UseVisualStyleBackColor = true;
             this.btnFindRoad.Click += new System.EventHandler(this.BtnFindRoad_Click);

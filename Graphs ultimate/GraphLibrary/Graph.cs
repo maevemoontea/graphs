@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Linq;
+using System.Collections.Generic;
 
 
 namespace GraphLibrary
@@ -37,12 +38,17 @@ namespace GraphLibrary
             Node[] nodesArray = new Node[this.numberOfNodes];
             for (int i = 0; i < this.numberOfNodes; i ++)
             {
-                nodesArray[i] = new Node();
+                nodesArray[i] = new Node(this);
                 nodesArray[i].Name = dictionary[i];
                 double x = Math.Cos(2 * Math.PI * i / this.numberOfNodes) * R + center.X;
                 nodesArray[i].position.X = Convert.ToInt32(x);
                 double y = Math.Sin(2 * Math.PI * i / this.numberOfNodes) * R + center.Y;
                 nodesArray[i].position.Y = Convert.ToInt32(y);
+                nodesArray[i].Extent = new int[this.numberOfNodes];
+                for (int j = 0; j < this.numberOfNodes; j++)
+                {
+                    nodesArray[i].Extent[j] = arr[i, j];
+                }
             }
             nodes = nodesArray;
 
@@ -51,7 +57,7 @@ namespace GraphLibrary
             {
                 for (int j = 0; j < this.numberOfNodes; j++)
                 {
-                    if (adjacencyMatrix[i, j] == 1)
+                    if (adjacencyMatrix[i, j] != 0)
                     {
                         nodes[i].Degree += 1;
                         nodes[i].ConnectionsList += j;
@@ -141,32 +147,101 @@ namespace GraphLibrary
             else
             {
                 //запуск рекурсії
-                result = nodes[Start].Name + ", " + WriteRoad(Start, Dest);
+                result = nodes[Start].Name + ", " + WriteRoad(Start, Dest, this);
             }
             return result;
         }
         
-        public string WriteRoad(int Start, int Dest)
+        public string WriteRoad(int Start, int Dest, Graph graph)
         {
-            string way ="";
+            string way = "and nothing else metter";
+
+            /*string way ="";
             //задання умови виходу і пошуку
-            if (nodes[Start].Name == nodes[Dest].Name)
+            if (graph.nodes[Start].Name == graph.nodes[Dest].Name)
             {
-                way = nodes[Start].Name + ", ";
+                way = graph.nodes[Start].Name + ", ";
             } else
             {
-                if (nodes[Start].Connections.Length > 0 & nodes[Start].Cursor < nodes[Start].Connections.Length)
+                if (graph.nodes[Start].Connections.Length > 0 & graph.nodes[Start].Cursor < graph.nodes[Start].Connections.Length)
                 {
-                    int nextNode = nodes[Start].Cursor;
-                    way = this.WriteRoad(nextNode, Dest);
-                    nodes[Start].Cursor++;
+                    int nextNode = graph.nodes[Start].Cursor;
+                    way = this.WriteRoad(nextNode, Dest, this);
+                    graph.nodes[Start].Cursor++;
                 } else
                 {
                     //node has no way out
                 }
-            }
+            }*/
 
             return way;
+        }
+
+        public string BackupsFinding(int distance, int amount, int maxConnections)
+        {
+            string output = "";
+            
+            //find available nodes for backups:
+            for (int i = 0; i < this.NumberOfNodes; i++)
+            {
+                output += "Node " + this.Nodes[i].Name + " availables: ";
+                this.Nodes[i].Availables = new List<Node>() { };
+                this.Nodes[i].StoredNodes = new List<Node>() { };
+                this.Nodes[i].BackupArray = new List<Node>() { };
+                for (int j = 0; j < this.NumberOfNodes; j++)
+                {
+                    if (this.adjacencyMatrix[i, j] < distance & this.adjacencyMatrix[i,j] != 0)
+                    {
+                        this.Nodes[i].Availables.Add(this.Nodes[j]);
+                        output += this.Nodes[j].Name + "; ";
+                    }
+                }
+                output += "\r\n";
+                if (this.Nodes[i].Availables.Count < amount)
+                {
+                    output = "Мережа з заданими параметрами неможлива для даного графу. Є вузли, в яких не буде достатньої кількості бекап-пристроїв.";
+                    return output;
+                }
+            }
+
+            //form backups:
+            var sortedByAvailability = this.Nodes.OrderBy(node => node.Availables.Count);
+            foreach (Node node in sortedByAvailability)
+            {
+                output += "\r\n Node " + node.Name + " backups: ";
+                var stackForBackups = node.Availables.OrderBy(n => n.Degree);
+                foreach (Node backup in stackForBackups)
+                {
+                    /*
+                    if (backup.StoredNodes.Count <= maxConnections)
+                    {
+                        node.BackupArray.Add(backup);
+                        backup.StoredNodes.Add(node);
+                        output += backup.Name + "; ";
+                    }
+                    else { break; }
+                    */
+                    int connections = backup.StoredNodes.Count;
+                    if (connections == maxConnections)
+                    {
+                        continue;
+                    }
+                    node.BackupArray.Add(backup);
+                    backup.StoredNodes.Add(node);
+                    output += backup.Name + "; ";
+                    if (node.BackupArray.Count == amount)
+                    {
+                        break;
+                    }
+                }
+                if (node.BackupArray.Count < amount)
+                {
+                    output = "Мережа з заданими параметрами неможлива для даного графу. Є вузли, в яких не буде достатньої кількості бекап-пристроїв.";
+                    return output;
+                }
+            }
+
+            return output;
         }
     }
 }
