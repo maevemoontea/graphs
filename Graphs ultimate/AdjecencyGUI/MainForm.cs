@@ -89,24 +89,7 @@ namespace AdjecencyGUI
             return n;
         }
 
-        private void BtnClear_Click(object sender, EventArgs e)
-        {
-            this.ClearTheArea();
-            this.DrawTheLegend();
-            textBoxNotes.Text = "";
-            textBoxSetN.Text = "";
-        }
-
-        private void BtnManualGraph_Click(object sender, EventArgs e)
-        {
-            this.ClearTheArea();
-            this.DrawTheLegend();
-            int n;
-            n = this.UseNumberOfNodes();
-            AdjacencyMatrixForm window = new AdjacencyMatrixForm(n);
-            window.Show();
-        }
-        private void BtnAutoGraph_Click(object sender, EventArgs e)
+        private void ToolStripBtnAutoGraph_Click(object sender, EventArgs e)
         {
             this.ClearTheArea();
             this.DrawTheLegend();
@@ -183,7 +166,8 @@ namespace AdjecencyGUI
 
             this.DrawTheLegend();
         }
-        private void BtnAutoGraphSymm_Click(object sender, EventArgs e)
+
+        private void ToolStripAutoGraphSymm_Click(object sender, EventArgs e)
         {
             this.ClearTheArea();
             this.DrawTheLegend();
@@ -263,17 +247,34 @@ namespace AdjecencyGUI
                 string caption = verticle.Name + " - " + verticle.Degree.ToString();
                 graphImage.DrawString(caption, drawFont, drawBrush, captionPosition);
             }
-
         }
 
-        private void BtnShowDegreesForm_Click(object sender, EventArgs e)
+        private void ToolStripClear_Click(object sender, EventArgs e)
+        {
+            this.ClearTheArea();
+            this.DrawTheLegend();
+            textBoxNotes.Text = "";
+            textBoxSetN.Text = "";
+        }
+
+        private void ToolStripManualGraph_Click(object sender, EventArgs e)
+        {
+            this.ClearTheArea();
+            this.DrawTheLegend();
+            int n;
+            n = this.UseNumberOfNodes();
+            AdjacencyMatrixForm window = new AdjacencyMatrixForm(n);
+            window.Show();
+        }
+
+        private void ToolStripShowDegreesForm_Click(object sender, EventArgs e)
         {
             greatGraph.SetDegrees();
             string text = greatGraph.Degrees;
-            DegreesListForm window = new DegreesListForm(text);
-            window.Show();
+            textBoxNotes.Text += "Ступені вершин графу: " + text + "\r\n";
         }
-        private void BtnViewIsolatedVertices_Click(object sender, EventArgs e)
+
+        private void ToolStripViewIsolatedVertices_Click(object sender, EventArgs e)
         {
             graphImage = this.CreateGraphics();
             graphImage.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
@@ -294,7 +295,8 @@ namespace AdjecencyGUI
 
             //btnViewIsolatedVertices.Enabled = false;
         }
-        private void BtnViewEndVertices_Click(object sender, EventArgs e)
+
+        private void ToolStripViewEndVertices_Click(object sender, EventArgs e)
         {
             graphImage = this.CreateGraphics();
             graphImage.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
@@ -316,13 +318,13 @@ namespace AdjecencyGUI
             //btnViewEndVertices.Enabled = false;
         }
 
-        private void BtnFindTheWay_Click(object sender, EventArgs e)
+        private void ToolStripFindTheWay_Click(object sender, EventArgs e)
         {
             FindTheWayForm window = new FindTheWayForm(greatGraph);
             window.Show();
         }
 
-        private void BtnBackupWindow_Click(object sender, EventArgs e)
+        private void ToolStripBackupWindow_Click(object sender, EventArgs e)
         {
             FindBackupsForm window = new FindBackupsForm(greatGraph, this);
             window.Show();

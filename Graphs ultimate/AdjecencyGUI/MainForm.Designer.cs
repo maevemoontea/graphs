@@ -28,16 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxSetN = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnAutoGraph = new System.Windows.Forms.Button();
-            this.btnManualGraph = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnShowDegreesForm = new System.Windows.Forms.Button();
-            this.btnViewIsolatedVertices = new System.Windows.Forms.Button();
-            this.btnViewEndVertices = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,115 +37,34 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxNotes = new System.Windows.Forms.TextBox();
-            this.btnFindTheWay = new System.Windows.Forms.Button();
-            this.btnAutoGraphSymm = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnBackupWindow = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripClear = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.textBoxSetN = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripBtnAutoGraph = new System.Windows.Forms.ToolStripButton();
+            this.toolStripAutoGraphSymm = new System.Windows.Forms.ToolStripButton();
+            this.toolStripManualGraph = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripShowDegreesForm = new System.Windows.Forms.ToolStripButton();
+            this.toolStripViewIsolatedVertices = new System.Windows.Forms.ToolStripButton();
+            this.toolStripViewEndVertices = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripFindTheWay = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBackupWindow = new System.Windows.Forms.ToolStripButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Кількість вершин:";
-            // 
-            // textBoxSetN
-            // 
-            this.textBoxSetN.Location = new System.Drawing.Point(115, 6);
-            this.textBoxSetN.Name = "textBoxSetN";
-            this.textBoxSetN.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSetN.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(242, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 13);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Матриця суміжності:";
-            // 
-            // btnAutoGraph
-            // 
-            this.btnAutoGraph.Location = new System.Drawing.Point(359, 6);
-            this.btnAutoGraph.Name = "btnAutoGraph";
-            this.btnAutoGraph.Size = new System.Drawing.Size(92, 23);
-            this.btnAutoGraph.TabIndex = 1;
-            this.btnAutoGraph.Text = "Згенерувати";
-            this.btnAutoGraph.UseVisualStyleBackColor = true;
-            this.btnAutoGraph.Click += new System.EventHandler(this.BtnAutoGraph_Click);
-            // 
-            // btnManualGraph
-            // 
-            this.btnManualGraph.Location = new System.Drawing.Point(656, 6);
-            this.btnManualGraph.Name = "btnManualGraph";
-            this.btnManualGraph.Size = new System.Drawing.Size(121, 23);
-            this.btnManualGraph.TabIndex = 3;
-            this.btnManualGraph.Text = "Заповнити вручну";
-            this.btnManualGraph.UseVisualStyleBackColor = true;
-            this.btnManualGraph.Click += new System.EventHandler(this.BtnManualGraph_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(921, 6);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 15;
-            this.btnClear.Text = "Скасувати";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 391);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 20);
-            this.label3.TabIndex = 50;
-            this.label3.Text = "Дії з графом";
-            // 
-            // btnShowDegreesForm
-            // 
-            this.btnShowDegreesForm.Location = new System.Drawing.Point(20, 439);
-            this.btnShowDegreesForm.Name = "btnShowDegreesForm";
-            this.btnShowDegreesForm.Size = new System.Drawing.Size(246, 23);
-            this.btnShowDegreesForm.TabIndex = 6;
-            this.btnShowDegreesForm.Text = "Перелік ступенів вершин";
-            this.btnShowDegreesForm.UseVisualStyleBackColor = true;
-            this.btnShowDegreesForm.Click += new System.EventHandler(this.BtnShowDegreesForm_Click);
-            // 
-            // btnViewIsolatedVertices
-            // 
-            this.btnViewIsolatedVertices.Location = new System.Drawing.Point(20, 469);
-            this.btnViewIsolatedVertices.Name = "btnViewIsolatedVertices";
-            this.btnViewIsolatedVertices.Size = new System.Drawing.Size(120, 23);
-            this.btnViewIsolatedVertices.TabIndex = 4;
-            this.btnViewIsolatedVertices.Text = "Ізольовані вершини";
-            this.btnViewIsolatedVertices.UseVisualStyleBackColor = true;
-            this.btnViewIsolatedVertices.Click += new System.EventHandler(this.BtnViewIsolatedVertices_Click);
-            // 
-            // btnViewEndVertices
-            // 
-            this.btnViewEndVertices.Location = new System.Drawing.Point(146, 469);
-            this.btnViewEndVertices.Name = "btnViewEndVertices";
-            this.btnViewEndVertices.Size = new System.Drawing.Size(120, 23);
-            this.btnViewEndVertices.TabIndex = 5;
-            this.btnViewEndVertices.Text = "Кінцеві вершини";
-            this.btnViewEndVertices.UseVisualStyleBackColor = true;
-            this.btnViewEndVertices.Click += new System.EventHandler(this.BtnViewEndVertices_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
             this.label4.Location = new System.Drawing.Point(490, 512);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.Size = new System.Drawing.Size(86, 20);
             this.label4.TabIndex = 50;
             this.label4.Text = "Легенда:";
             // 
@@ -215,68 +125,176 @@
             // textBoxNotes
             // 
             this.textBoxNotes.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBoxNotes.Location = new System.Drawing.Point(20, 498);
+            this.textBoxNotes.Location = new System.Drawing.Point(20, 427);
             this.textBoxNotes.Multiline = true;
             this.textBoxNotes.Name = "textBoxNotes";
-            this.textBoxNotes.Size = new System.Drawing.Size(246, 53);
-            this.textBoxNotes.TabIndex = 7;
+            this.textBoxNotes.Size = new System.Drawing.Size(246, 173);
+            this.textBoxNotes.TabIndex = 55;
+            this.textBoxNotes.TabStop = false;
             // 
-            // btnFindTheWay
+            // toolStrip1
             // 
-            this.btnFindTheWay.Location = new System.Drawing.Point(20, 577);
-            this.btnFindTheWay.Name = "btnFindTheWay";
-            this.btnFindTheWay.Size = new System.Drawing.Size(120, 23);
-            this.btnFindTheWay.TabIndex = 8;
-            this.btnFindTheWay.Text = "Пошук маршруту";
-            this.btnFindTheWay.UseVisualStyleBackColor = true;
-            this.btnFindTheWay.Click += new System.EventHandler(this.BtnFindTheWay_Click);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripClear,
+            this.toolStripSeparator3,
+            this.toolStripLabel3,
+            this.textBoxSetN,
+            this.toolStripBtnAutoGraph,
+            this.toolStripAutoGraphSymm,
+            this.toolStripManualGraph,
+            this.toolStripSeparator2,
+            this.toolStripLabel1,
+            this.toolStripShowDegreesForm,
+            this.toolStripViewIsolatedVertices,
+            this.toolStripViewEndVertices,
+            this.toolStripSeparator1,
+            this.toolStripLabel2,
+            this.toolStripFindTheWay,
+            this.toolStripBackupWindow});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1008, 25);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // btnAutoGraphSymm
+            // toolStripClear
             // 
-            this.btnAutoGraphSymm.Location = new System.Drawing.Point(457, 6);
-            this.btnAutoGraphSymm.Name = "btnAutoGraphSymm";
-            this.btnAutoGraphSymm.Size = new System.Drawing.Size(193, 23);
-            this.btnAutoGraphSymm.TabIndex = 2;
-            this.btnAutoGraphSymm.Text = "Згенерувати симетричну матрицю";
-            this.btnAutoGraphSymm.UseVisualStyleBackColor = true;
-            this.btnAutoGraphSymm.Click += new System.EventHandler(this.BtnAutoGraphSymm_Click);
+            this.toolStripClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripClear.Image = ((System.Drawing.Image)(resources.GetObject("toolStripClear.Image")));
+            this.toolStripClear.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripClear.Name = "toolStripClear";
+            this.toolStripClear.Size = new System.Drawing.Size(23, 22);
+            this.toolStripClear.Text = "Очистити";
+            this.toolStripClear.Click += new System.EventHandler(this.ToolStripClear_Click);
             // 
-            // label11
+            // toolStripSeparator3
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(21, 420);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 13);
-            this.label11.TabIndex = 50;
-            this.label11.Text = "Лаб. 1";
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // label12
+            // toolStripLabel3
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(21, 559);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(39, 13);
-            this.label12.TabIndex = 50;
-            this.label12.Text = "Лаб. 2";
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(92, 22);
+            this.toolStripLabel3.Text = "Створити граф:";
             // 
-            // label13
+            // textBoxSetN
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(180, 559);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 13);
-            this.label13.TabIndex = 50;
-            this.label13.Text = "Лаб. 3";
+            this.textBoxSetN.Name = "textBoxSetN";
+            this.textBoxSetN.Size = new System.Drawing.Size(100, 25);
+            this.textBoxSetN.ToolTipText = "Кількість вершин:";
             // 
-            // btnBackupWindow
+            // toolStripBtnAutoGraph
             // 
-            this.btnBackupWindow.Location = new System.Drawing.Point(179, 577);
-            this.btnBackupWindow.Name = "btnBackupWindow";
-            this.btnBackupWindow.Size = new System.Drawing.Size(195, 23);
-            this.btnBackupWindow.TabIndex = 9;
-            this.btnBackupWindow.Text = "Задача пошуку бекап-множин";
-            this.btnBackupWindow.UseVisualStyleBackColor = true;
-            this.btnBackupWindow.Click += new System.EventHandler(this.BtnBackupWindow_Click);
+            this.toolStripBtnAutoGraph.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnAutoGraph.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnAutoGraph.Image")));
+            this.toolStripBtnAutoGraph.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnAutoGraph.Name = "toolStripBtnAutoGraph";
+            this.toolStripBtnAutoGraph.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtnAutoGraph.Text = "Орієнтований граф";
+            this.toolStripBtnAutoGraph.Click += new System.EventHandler(this.ToolStripBtnAutoGraph_Click);
+            // 
+            // toolStripAutoGraphSymm
+            // 
+            this.toolStripAutoGraphSymm.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripAutoGraphSymm.Image = ((System.Drawing.Image)(resources.GetObject("toolStripAutoGraphSymm.Image")));
+            this.toolStripAutoGraphSymm.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripAutoGraphSymm.Name = "toolStripAutoGraphSymm";
+            this.toolStripAutoGraphSymm.Size = new System.Drawing.Size(23, 22);
+            this.toolStripAutoGraphSymm.Text = "Зважений неорієнтований граф";
+            this.toolStripAutoGraphSymm.Click += new System.EventHandler(this.ToolStripAutoGraphSymm_Click);
+            // 
+            // toolStripManualGraph
+            // 
+            this.toolStripManualGraph.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripManualGraph.Image = ((System.Drawing.Image)(resources.GetObject("toolStripManualGraph.Image")));
+            this.toolStripManualGraph.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripManualGraph.Name = "toolStripManualGraph";
+            this.toolStripManualGraph.Size = new System.Drawing.Size(23, 22);
+            this.toolStripManualGraph.Text = "Створити матрицю";
+            this.toolStripManualGraph.Click += new System.EventHandler(this.ToolStripManualGraph_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(75, 22);
+            this.toolStripLabel1.Text = "Властивості:";
+            // 
+            // toolStripShowDegreesForm
+            // 
+            this.toolStripShowDegreesForm.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripShowDegreesForm.Image = ((System.Drawing.Image)(resources.GetObject("toolStripShowDegreesForm.Image")));
+            this.toolStripShowDegreesForm.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripShowDegreesForm.Name = "toolStripShowDegreesForm";
+            this.toolStripShowDegreesForm.Size = new System.Drawing.Size(23, 22);
+            this.toolStripShowDegreesForm.Text = "Перелік ступенів вершин";
+            this.toolStripShowDegreesForm.Click += new System.EventHandler(this.ToolStripShowDegreesForm_Click);
+            // 
+            // toolStripViewIsolatedVertices
+            // 
+            this.toolStripViewIsolatedVertices.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripViewIsolatedVertices.Image = ((System.Drawing.Image)(resources.GetObject("toolStripViewIsolatedVertices.Image")));
+            this.toolStripViewIsolatedVertices.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripViewIsolatedVertices.Name = "toolStripViewIsolatedVertices";
+            this.toolStripViewIsolatedVertices.Size = new System.Drawing.Size(23, 22);
+            this.toolStripViewIsolatedVertices.Text = "Ізольовані вершини";
+            this.toolStripViewIsolatedVertices.Click += new System.EventHandler(this.ToolStripViewIsolatedVertices_Click);
+            // 
+            // toolStripViewEndVertices
+            // 
+            this.toolStripViewEndVertices.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripViewEndVertices.Image = ((System.Drawing.Image)(resources.GetObject("toolStripViewEndVertices.Image")));
+            this.toolStripViewEndVertices.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripViewEndVertices.Name = "toolStripViewEndVertices";
+            this.toolStripViewEndVertices.Size = new System.Drawing.Size(23, 22);
+            this.toolStripViewEndVertices.Text = "Кінцеві вершини";
+            this.toolStripViewEndVertices.Click += new System.EventHandler(this.ToolStripViewEndVertices_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(72, 22);
+            this.toolStripLabel2.Text = "Алгоритми:";
+            // 
+            // toolStripFindTheWay
+            // 
+            this.toolStripFindTheWay.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripFindTheWay.Image = ((System.Drawing.Image)(resources.GetObject("toolStripFindTheWay.Image")));
+            this.toolStripFindTheWay.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripFindTheWay.Name = "toolStripFindTheWay";
+            this.toolStripFindTheWay.Size = new System.Drawing.Size(23, 22);
+            this.toolStripFindTheWay.Text = "Пошук маршруту";
+            this.toolStripFindTheWay.Click += new System.EventHandler(this.ToolStripFindTheWay_Click);
+            // 
+            // toolStripBackupWindow
+            // 
+            this.toolStripBackupWindow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBackupWindow.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBackupWindow.Image")));
+            this.toolStripBackupWindow.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBackupWindow.Name = "toolStripBackupWindow";
+            this.toolStripBackupWindow.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBackupWindow.Text = "Пошук мережі множин";
+            this.toolStripBackupWindow.Click += new System.EventHandler(this.ToolStripBackupWindow_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 391);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 20);
+            this.label3.TabIndex = 50;
+            this.label3.Text = "Дії з графом:";
             // 
             // MainForm
             // 
@@ -284,50 +302,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1008, 612);
-            this.Controls.Add(this.btnBackupWindow);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.btnAutoGraphSymm);
-            this.Controls.Add(this.btnFindTheWay);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.textBoxNotes);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnViewEndVertices);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btnViewIsolatedVertices);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnShowDegreesForm);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnManualGraph);
-            this.Controls.Add(this.btnAutoGraph);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxSetN);
-            this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "MainForm";
             this.Text = "Задання графу матрицею суміжності";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxSetN;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAutoGraph;
-        private System.Windows.Forms.Button btnManualGraph;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnShowDegreesForm;
-        private System.Windows.Forms.Button btnViewIsolatedVertices;
-        private System.Windows.Forms.Button btnViewEndVertices;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -336,12 +331,24 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxNotes;
-        private System.Windows.Forms.Button btnFindTheWay;
-        private System.Windows.Forms.Button btnAutoGraphSymm;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button btnBackupWindow;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripTextBox textBoxSetN;
+        private System.Windows.Forms.ToolStripButton toolStripBtnAutoGraph;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripAutoGraphSymm;
+        private System.Windows.Forms.ToolStripButton toolStripManualGraph;
+        private System.Windows.Forms.ToolStripButton toolStripClear;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton toolStripShowDegreesForm;
+        private System.Windows.Forms.ToolStripButton toolStripViewIsolatedVertices;
+        private System.Windows.Forms.ToolStripButton toolStripViewEndVertices;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripButton toolStripFindTheWay;
+        private System.Windows.Forms.ToolStripButton toolStripBackupWindow;
+        private System.Windows.Forms.Label label3;
     }
 }
 

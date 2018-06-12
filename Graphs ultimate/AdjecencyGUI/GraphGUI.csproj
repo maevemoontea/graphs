@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,12 +66,6 @@
     <Compile Include="AdjacencyMatrixForm.Designer.cs">
       <DependentUpon>AdjacencyMatrixForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DegreesListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DegreesListForm.Designer.cs">
-      <DependentUpon>DegreesListForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="FindBackupsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,9 +94,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdjacencyMatrixForm.resx">
       <DependentUpon>AdjacencyMatrixForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DegreesListForm.resx">
-      <DependentUpon>DegreesListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindBackupsForm.resx">
       <DependentUpon>FindBackupsForm.cs</DependentUpon>
@@ -128,6 +134,18 @@
       <Project>{80b9a13d-9e47-4803-a21c-cf6b8e95921c}</Project>
       <Name>GraphLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
