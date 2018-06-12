@@ -152,7 +152,7 @@ namespace GraphLibrary
             return result;
         }
         
-        public string WriteRoad(int Start, int Dest, Graph graph)
+        private string WriteRoad(int Start, int Dest, Graph graph)
         {
             string way = "and nothing else metter";
 

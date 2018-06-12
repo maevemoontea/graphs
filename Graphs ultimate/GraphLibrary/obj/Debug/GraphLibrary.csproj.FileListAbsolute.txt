@@ -10,3 +10,9 @@ C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\GraphLibrary\obj\Deb
 C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\GraphLibrary\obj\Debug\GraphLibrary.csproj.CoreCompileInputs.cache
 C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\GraphLibrary\obj\Debug\GraphLibrary.dll
 C:\Users\maeve\source\repos\GRAPHS ultimate\Graphs ultimate\GraphLibrary\obj\Debug\GraphLibrary.pdb
+C:\Users\maeve\Documents\GitHub\graphs\Graphs ultimate\GraphLibrary\bin\Debug\GraphLibrary.dll
+C:\Users\maeve\Documents\GitHub\graphs\Graphs ultimate\GraphLibrary\bin\Debug\GraphLibrary.pdb
+C:\Users\maeve\Documents\GitHub\graphs\Graphs ultimate\GraphLibrary\obj\Debug\GraphLibrary.csprojResolveAssemblyReference.cache
+C:\Users\maeve\Documents\GitHub\graphs\Graphs ultimate\GraphLibrary\obj\Debug\GraphLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maeve\Documents\GitHub\graphs\Graphs ultimate\GraphLibrary\obj\Debug\GraphLibrary.dll
+C:\Users\maeve\Documents\GitHub\graphs\Graphs ultimate\GraphLibrary\obj\Debug\GraphLibrary.pdb
