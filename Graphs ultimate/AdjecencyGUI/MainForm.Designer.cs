@@ -89,11 +89,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(538, 544);
+            this.label7.Location = new System.Drawing.Point(665, 544);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.Size = new System.Drawing.Size(243, 13);
             this.label7.TabIndex = 50;
-            this.label7.Text = "Ребра";
+            this.label7.Text = "Ребра (направлені від чорного до фіолетового)";
             // 
             // label8
             // 
@@ -128,7 +128,7 @@
             this.textBoxNotes.Location = new System.Drawing.Point(20, 427);
             this.textBoxNotes.Multiline = true;
             this.textBoxNotes.Name = "textBoxNotes";
-            this.textBoxNotes.Size = new System.Drawing.Size(246, 173);
+            this.textBoxNotes.Size = new System.Drawing.Size(313, 173);
             this.textBoxNotes.TabIndex = 55;
             this.textBoxNotes.TabStop = false;
             // 
@@ -182,7 +182,7 @@
             // 
             this.textBoxSetN.Name = "textBoxSetN";
             this.textBoxSetN.Size = new System.Drawing.Size(100, 25);
-            this.textBoxSetN.ToolTipText = "Кількість вершин:";
+            this.textBoxSetN.ToolTipText = "Кількість вершин";
             // 
             // toolStripBtnAutoGraph
             // 

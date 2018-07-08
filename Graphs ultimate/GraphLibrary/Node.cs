@@ -11,12 +11,13 @@ namespace GraphLibrary
         private int degree;
         private string color;
         private string[] connections;
-        private string connectionsList;
+        private List<Node> connectionsList;
         private int cursor;
         private int[] extent; //міра, об'єм -- мається на увазі вага ребер
         private List<Node> availables;
         private List<Node> backupArray;
         private List<Node> storedNodes;
+        private bool marker;
 
         public Graph Parent
         {
@@ -26,6 +27,11 @@ namespace GraphLibrary
         {
             get { return name; }
             set { name = value; }
+        }
+        public Point Position
+        {
+            get { return position; }
+            set { position = value; }
         }
         public int Degree
         {
@@ -42,7 +48,7 @@ namespace GraphLibrary
             get { return connections; }
             set { connections = value; }
         }
-        public string ConnectionsList
+        public List<Node> ConnectionsList
         {
             get { return connectionsList; }
             set { connectionsList = value; }
@@ -72,14 +78,19 @@ namespace GraphLibrary
             get { return storedNodes; }
             set { storedNodes = value; }
         }
+        public bool Marker
+        {
+            get { return marker; }
+            set { marker = value; }
+        }
 
         public Node(Graph papa)
         {
             parent = papa;
             color = "Gray"; //not used yet
             degree = 0;
-            connectionsList = "";
             cursor = 0;
+            ConnectionsList = new List<Node>() { };
         }
     }
 }

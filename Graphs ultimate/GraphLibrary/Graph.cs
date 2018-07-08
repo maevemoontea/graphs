@@ -60,17 +60,16 @@ namespace GraphLibrary
                     if (adjacencyMatrix[i, j] != 0)
                     {
                         nodes[i].Degree += 1;
-                        nodes[i].ConnectionsList += j;
+                        nodes[j].Degree += 1;
+                        nodes[i].ConnectionsList.Add(this.Nodes[j]);
                     }
                 }
             }
+        }
 
-            for (int i = 0; i < this.NumberOfNodes; i++)
-            {
-                string[] array = nodes[i].ConnectionsList.Select(c => c.ToString()).ToArray();
-                nodes[i].Connections = array;//Array.ConvertAll(array, element => Convert.ToInt32(element));
-            }
-
+        public int[,] AdjacencyMatrix
+        {
+            get { return adjacencyMatrix; }
         }
 
         public string IsolatedNodes
@@ -130,51 +129,58 @@ namespace GraphLibrary
             }
         }
 
-        public string FindTheRoad(int Start, int Dest)
+        public string FindTheRoad(Node Start, Node Dest)
         {
             string result = "Поки що нічого не знайдено";
 
             //перевірка, чи не збігаються ноди, бо тоді не варто й запускати алгоритм
-            if (nodes[Start].Name == nodes[Dest].Name)
+            if (Start == Dest)
             {
                 result = "Вказані вершини збігаються";
             }
             //перевірка, чи не є вибрані ноди ізольованими, бо тоді не варто й запускати алгоритм
-            else if (nodes[Start].Degree == 0 | nodes[Dest].Degree == 0)
+            else if (Start.Degree == 0 || Dest.Degree == 0)
             {
                 result = "Вказані вершини не з'єднані.";
             }
             else
             {
                 //запуск рекурсії
-                result = nodes[Start].Name + ", " + WriteRoad(Start, Dest, this);
+                result = WriteRoad(Start, Dest);
+            }
+            for (int i = 0; i < this.NumberOfNodes; i++)
+            {
+                this.nodes[i].Marker = false;
             }
             return result;
         }
         
-        private string WriteRoad(int Start, int Dest, Graph graph)
+        private string WriteRoad(Node Start, Node Dest)
         {
-            string way = "and nothing else metter";
-
-            /*string way ="";
-            //задання умови виходу і пошуку
-            if (graph.nodes[Start].Name == graph.nodes[Dest].Name)
+            string breadcrumbs = "";
+            if (Start.Marker)
             {
-                way = graph.nodes[Start].Name + ", ";
+                return breadcrumbs;
+            }
+            breadcrumbs = Start.Name;
+            Start.Marker = true;
+            if (Start == Dest)
+            {
+                for (int i = 0; i < this.NumberOfNodes; i++)
+                {
+                    this.nodes[i].Marker = true;
+                }
+                return breadcrumbs;
             } else
             {
-                if (graph.nodes[Start].Connections.Length > 0 & graph.nodes[Start].Cursor < graph.nodes[Start].Connections.Length)
+                for (int i = 0; i < Start.ConnectionsList.Count; i++)
                 {
-                    int nextNode = graph.nodes[Start].Cursor;
-                    way = this.WriteRoad(nextNode, Dest, this);
-                    graph.nodes[Start].Cursor++;
-                } else
-                {
-                    //node has no way out
-                }
-            }*/
-
-            return way;
+                    Node Next = Start.ConnectionsList[i];
+                    breadcrumbs += this.WriteRoad(Next, Dest);
+                } 
+            }
+            //breadcrumbs += Start.Name;
+            return breadcrumbs;
         }
 
         public string BackupsFinding(int distance, int amount, int maxConnections)
@@ -190,7 +196,7 @@ namespace GraphLibrary
                 this.Nodes[i].BackupArray = new List<Node>() { };
                 for (int j = 0; j < this.NumberOfNodes; j++)
                 {
-                    if (this.adjacencyMatrix[i, j] < distance & this.adjacencyMatrix[i,j] != 0)
+                    if (this.adjacencyMatrix[i, j] <= distance & this.adjacencyMatrix[i,j] != 0)
                     {
                         this.Nodes[i].Availables.Add(this.Nodes[j]);
                         output += this.Nodes[j].Name + "; ";
@@ -212,15 +218,6 @@ namespace GraphLibrary
                 var stackForBackups = node.Availables.OrderBy(n => n.Degree);
                 foreach (Node backup in stackForBackups)
                 {
-                    /*
-                    if (backup.StoredNodes.Count <= maxConnections)
-                    {
-                        node.BackupArray.Add(backup);
-                        backup.StoredNodes.Add(node);
-                        output += backup.Name + "; ";
-                    }
-                    else { break; }
-                    */
                     int connections = backup.StoredNodes.Count;
                     if (connections == maxConnections)
                     {
@@ -242,6 +239,19 @@ namespace GraphLibrary
             }
 
             return output;
+        }
+
+        public int FindNodeIndexByName(string name)
+        {
+            dictionary = new string[26] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+            for (int i = 0; i < dictionary.Length; i++)
+            {
+                if (dictionary[i] == name)
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
     }
 }

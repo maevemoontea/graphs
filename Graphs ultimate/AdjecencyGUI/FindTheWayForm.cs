@@ -17,28 +17,19 @@ namespace AdjecencyGUI
 
         private void BtnFindRoad_Click(object sender, EventArgs e)
         {
+            //this.graphToUse.SetConnections();
             string startName = textBoxStart.Text;
             string destName = textBoxDestination.Text;
             string RightWay = "RightWay ";
-            // для пошуку індексу of the node за назвою використаю той самий масив, який використовуваля для іменування нодів, хоча треба це робити безпосередньо на графі або просити у користувача індекси. Я б створила на зображенні графу контроли для вибору нодів, які б одразу містили індекси.
-            string[] dictionary = new string[26] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
-            int startIndex = 0;
 
-            int destIndex = 0;
-            for (int i = 0; i < dictionary.Length; i++)
-            {
-                if (dictionary[i] == startName)
-                {
-                    startIndex = i;
-                }
-                if (dictionary[i] == destName)
-                {
-                    destIndex = i;
-                }
-            }
+            int startIndex = this.graphToUse.FindNodeIndexByName(startName);
+            Node Start = this.graphToUse.Nodes[startIndex];
+
+            int destIndex = this.graphToUse.FindNodeIndexByName(destName);
+            Node Dest = this.graphToUse.Nodes[destIndex];
 
             //запуск алгоритму пошуку
-            RightWay = this.graphToUse.FindTheRoad(startIndex, destIndex);
+            RightWay = this.graphToUse.FindTheRoad(Start, Dest);
 
             //обробка результатів (виведення на екран)
             textBoxResult.Text = RightWay;
